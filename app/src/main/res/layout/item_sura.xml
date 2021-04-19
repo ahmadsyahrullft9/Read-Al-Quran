@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/bgColor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/large_padding"
+        android:paddingTop="@dimen/extralarge_padding"
+        android:paddingRight="@dimen/large_padding"
+        android:paddingBottom="@dimen/extralarge_padding">
+
+        <RelativeLayout
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="@dimen/default_padding"
+            android:layout_marginRight="@dimen/default_padding"
+            android:background="?attr/islamicFrame">
+
+            <TextView
+                android:id="@+id/txt_num"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="?attr/textColor"
+                android:textStyle="bold"
+                tools:text="1" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_sura_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="?attr/textColor"
+                tools:text="@string/app_name" />
+
+            <TextView
+                android:id="@+id/txt_sura_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?attr/metaTextColor"
+                tools:text="@string/app_name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.example.readalquran.custom.MeQuranTextView
+                android:id="@+id/txt_sura_arab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="?attr/textColor"
+                tools:text="@string/app_name" />
+
+            <TextView
+                android:id="@+id/txt_sura_eng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?attr/metaTextColor"
+                tools:text="@string/app_name" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/divider" />
+</LinearLayout>

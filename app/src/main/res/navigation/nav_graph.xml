@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/listSuraFragment">
+    <fragment
+        android:id="@+id/listSuraFragment"
+        android:name="com.example.readalquran.fragments.ListSuraFragment"
+        android:label="List Surat"
+        tools:layout="@layout/fragment_list_sura">
+        <action
+            android:id="@+id/action_listSuraFragment_to_suraFragment"
+            app:destination="@id/suraFragment" />
+        <action
+            android:id="@+id/action_listSuraFragment_to_bookmarkFragment"
+            app:destination="@id/bookmarkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/suraFragment"
+        android:name="com.example.readalquran.fragments.SuraFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_sura">
+        <argument
+            android:name="sura"
+            app:argType="com.example.readalquran.models.Sura" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="indexAya"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.example.readalquran.fragments.BookmarkFragment"
+        android:label="All Bookmarks"
+        tools:layout="@layout/fragment_bookmark" >
+        <action
+            android:id="@+id/action_bookmarkFragment_to_suraFragment"
+            app:destination="@id/suraFragment" />
+    </fragment>
+</navigation>
